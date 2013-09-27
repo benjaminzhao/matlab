@@ -70,7 +70,8 @@ for t = 2:length(U) % step(1)is initial state, calc from step(2)
 %   code as below2:
     for type1 = 1:length(Xt)
         for type2 = 1:length(Xt)
-            bel_predict(find_i(bel_name, Xt{type1}), t) = P(find_i(Xt, Xt{type1}), find_i(Ut, U{t}), find_i(Xt_1, Xt{type2})) * bel(find_i(bel_name, Xt{type2}), t-1)...
+            bel_predict(find_i(bel_name, Xt{type1}), t) = P(find_i(Xt, Xt{type1}), find_i(Ut, U{t}), find_i(Xt_1, Xt{type2}))...
+                                                        * bel(find_i(bel_name, Xt{type2}), t-1)...
                                                         + bel_predict(find_i(bel_name, Xt{type1}), t);
         end
     end
