@@ -3,7 +3,7 @@
 % Author : benjamin_zhao
 % date :   2013-05-20
 % beyes filter algorithm
-% example of a robot measures a door wether open
+% example of a robot measures a door open or closed
 % input:
 %   p: probablity distribution -- data table
 %   bel_predict: belief table in prediction @ step(t)
